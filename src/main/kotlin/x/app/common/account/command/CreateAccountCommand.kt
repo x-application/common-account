@@ -8,6 +8,6 @@ package x.app.common.account.command
  */
 class CreateAccountCommand(
         accountId: String = "",
-        accountType: String = "",
-        password: String = ""
+        val accountType: String = "",
+        val password: String = ""
 ) : AbstractAccountCommand(accountId)
