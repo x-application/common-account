@@ -1,5 +1,7 @@
 package x.app.common.account.command
 
+import x.app.common.AbstractResult
+
 /**
  *   @Project: account
  *   @Package: x.app.common.account.command
@@ -10,4 +12,6 @@ class CreateAccountCommand(
         accountId: String = "",
         val accountType: String = "",
         val password: String = ""
-) : AbstractAccountCommand(accountId)
+) : AbstractAccountCommand<CreateAccountCommand.Result>(accountId) {
+    data class Result(val accountId: String) : AbstractResult()
+}
