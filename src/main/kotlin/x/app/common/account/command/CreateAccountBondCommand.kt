@@ -8,11 +8,11 @@ import x.app.common.AbstractResult
  *   @Author:  Iamee
  *   @Date:    2019-05-03 0:26
  */
-class BindAccountCommand(
+class CreateAccountBondCommand(
         accountId: String,
         val accountType: String,
         val userId: String
-) : AbstractAccountCommand<BindAccountCommand.Result>(accountId) {
+) : AbstractAccountCommand<CreateAccountBondCommand.Result>(accountId) {
 
     data class Result(val accountId: String, val userId: String) : AbstractResult()
 
