@@ -10,8 +10,8 @@ import x.app.common.AbstractResult
  */
 class CreateAccountCommand(
         accountId: String = "",
-        val accountType: String = "",
-        val password: String = ""
+        val userId: String = "",
+        val accountType: String = ""
 ) : AbstractAccountCommand<CreateAccountCommand.Result>(accountId) {
     data class Result(val accountId: String) : AbstractResult()
 }
